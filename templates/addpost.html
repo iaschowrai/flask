@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Post a Job{% endblock %}
+
+{% block content %}
+  <h1>Post a Job</h1>
+  <form method="POST"></form>
+    {{ form.csrf_token }}
+    <div>
+      {{ form.title.label }} {{ form.title }}
+    </div>
+    <div>
+      {{ form.salary_range.label }} {{ form.salary_range }}
+    </div>
+    <div>
+      {{ form.company.label }} {{ form.company }}
+    </div>
+    <div>
+      {{ form.category.label }} {{ form.category }}
+    </div>
+    <div>
+      {{ form.description.label }} {{ form.description }}
+    </div>
+    <div>
+      {{ form.email.label }} {{ form.email }}
+    </div>
+    <div>
+      <input type="submit" value="Post Job">
+    </div>
+  </form>
+{% endblock %}

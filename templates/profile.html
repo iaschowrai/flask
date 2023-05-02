@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Welcome, {{ current_user.firstname }} {{ current_user.lastname }}!</h1>
+  <p>Date of Birth: {{ current_user.dob.strftime('%Y-%m-%d') }}</p>
+  <p>Gender: {{ current_user.gender.value }}</p>
+  <p>Email: {{ current_user.email }}</p>
+  <p>User Type: {{ current_user.user_type.value }}</p>
+  <p>Created Date: {{ current_user.created_date.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+{% endblock %}
